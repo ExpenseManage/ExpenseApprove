@@ -22,7 +22,7 @@ public class UserController {
     UserDaoImpl UserDaoImpl;
 
     @PostMapping("/user")
-    public ResponseEntity getUsers(@RequestBody User user){
+    public ResponseEntity createUser(@RequestBody User user){
 //        TODO: add id in reponse
         UserDaoImpl.addUser(user.getName());
         Response responseBody = new Response();
@@ -31,4 +31,5 @@ public class UserController {
         ResponseEntity response = new  ResponseEntity<>(responseBody,HttpStatus.OK);
         return response;
     }
+
 }
