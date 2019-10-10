@@ -1,15 +1,21 @@
 package com.expenseApprove.expenseApprove.model;
 
+import com.expenseApprove.expenseApprove.controller.Constants;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Getter
+@Setter
 public class ApproverNotification {
 
-    @JsonProperty("UserId")
-    public String UserId;
+    @JsonProperty("userId")
+    public String userId;
 
-    @JsonProperty("ApproverId")
-    public String ApproverId;
+    @JsonProperty("approverId")
+    public String approverId;
 
     @JsonProperty("status")
-    public Integer status;
+    public Constants.approverNotification status;
 }

@@ -14,9 +14,7 @@ public class UserDaoImpl implements UserDao {
     @Autowired
     MongoTemplate mongoTemplate;
 
-    public void addUser(String name){
-        User user = new User();
-        user.setName(name);
+    public void addUser(User user){
         mongoTemplate.insert(user);
     }
 
