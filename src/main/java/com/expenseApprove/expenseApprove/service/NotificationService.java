@@ -1,9 +1,11 @@
 package com.expenseApprove.expenseApprove.service;
 
 import com.expenseApprove.expenseApprove.controller.Constants;
+import com.expenseApprove.expenseApprove.model.Approver;
+import com.expenseApprove.expenseApprove.model.ApproverNotification;
 
 public interface NotificationService {
-    public void addApproverNotification(String UserId, String ApproverId, Constants.approverNotification status);
+    public void addApproverNotification(Approver approverRequest, Constants.approverNotification status);
 
-    public void updateApproverNotification(String UserId, String ApproverId, Constants.approverNotification status);
+    public void updateApproverNotification(ApproverNotification approverRequest);
 }
