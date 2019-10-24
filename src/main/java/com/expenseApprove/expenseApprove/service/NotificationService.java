@@ -1,6 +1,6 @@
 package com.expenseApprove.expenseApprove.service;
 
-import com.expenseApprove.expenseApprove.controller.Constants;
+import com.expenseApprove.expenseApprove.constants.Constants;
 import com.expenseApprove.expenseApprove.model.Approver;
 import com.expenseApprove.expenseApprove.model.ApproverNotification;
 
