@@ -1,6 +1,6 @@
 package com.expenseApprove.expenseApprove.model;
 
-import com.expenseApprove.expenseApprove.controller.Constants;
+import com.expenseApprove.expenseApprove.constants.Constants;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;

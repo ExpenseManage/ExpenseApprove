@@ -1,4 +1,4 @@
-package com.expenseApprove.expenseApprove.controller;
+package com.expenseApprove.expenseApprove.constants;
 
 public class Constants {
 
