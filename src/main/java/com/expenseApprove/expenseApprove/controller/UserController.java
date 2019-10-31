@@ -24,13 +24,13 @@ public class UserController {
     UserServiceImpl userService;
 
     @PostMapping("/user")
-    public ResponseEntity createUser(@RequestBody User user){
+    public ResponseEntity<Response> createUser(@RequestBody User user){
 //        TODO: add id in response
         userService.addUser(user);
         Response responseBody = new Response();
         responseBody.setMessage("added user");
         responseBody.setStatus(HttpStatus.OK);
-        ResponseEntity response = new  ResponseEntity<>(responseBody,HttpStatus.OK);
+        ResponseEntity response = new  ResponseEntity<Response>(responseBody,HttpStatus.OK);
         return response;
     }
 
