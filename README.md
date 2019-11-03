@@ -1,3 +1,3 @@
 # ExpenseApprove
 
-Spring boot App to have approvals and manage expenses
+Spring boot App to approval system for expenses.
