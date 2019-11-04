@@ -15,20 +15,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/approvers")
-public class  ApproverController{
+public class ApproverController {
 
     @Autowired
     UserServiceImpl userService;
 
 
     @PostMapping("/approver")
-    public ResponseEntity<Response> createApprover(@RequestBody ApproverRequest approverRequest){
+    public ResponseEntity<Response> createApprover(@RequestBody ApproverRequest approverRequest) {
 //        TODO: add id in response
         userService.addApprover(approverRequest);
         Response responseBody = new Response();
         responseBody.setMessage("added approver");
         responseBody.setStatus(HttpStatus.OK);
-        ResponseEntity response = new  ResponseEntity<Response>(responseBody,HttpStatus.OK);
+        ResponseEntity response = new ResponseEntity<Response>(responseBody, HttpStatus.OK);
         return response;
     }
 

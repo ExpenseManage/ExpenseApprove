@@ -17,14 +17,14 @@ public class UserDaoImpl implements UserDao {
     @Autowired
     MongoTemplate mongoTemplate;
 
-    public void addUser(User user){
+    public void addUser(User user) {
         mongoTemplate.insert(user);
     }
 
-//    TODO: add mongo exception
-    public Long getSize(){
+    //    TODO: add mongo exception
+    public Long getSize() {
         Query query = new Query();
-        List data = mongoTemplate.find(query,User.class);
+        List data = mongoTemplate.find(query, User.class);
         return mongoTemplate.count(query, User.class);
     }
 
@@ -35,10 +35,9 @@ public class UserDaoImpl implements UserDao {
         Update update = new Update();
         assert user != null;
         List approverList = new ArrayList();
-        if(user.getApprovers()==null){
+        if (user.getApprovers() == null) {
             approverList.add(approverId);
-        }
-        else{
+        } else {
             approverList = user.getApprovers();
             approverList.add(approverId);
         }
@@ -47,14 +46,14 @@ public class UserDaoImpl implements UserDao {
 
     }
 
-    public User getUserById(String id){
+    public User getUserById(String id) {
         Query query = new Query();
         query.addCriteria(Criteria.where("id").is(id));
         User user = mongoTemplate.findOne(query, User.class);
         return user;
     }
 
-    public boolean existsUser(String userId){
+    public boolean existsUser(String userId) {
         Query query = new Query();
         query.addCriteria(Criteria.where("id").is(userId));
         User user = mongoTemplate.findOne(query, User.class);

@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ExpenseApproveApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ExpenseApproveApplication.class, args);
-		System.out.println("started");
+    public static void main(String[] args) {
+        SpringApplication.run(ExpenseApproveApplication.class, args);
+        System.out.println("started");
 
-	}
+    }
 
 }
