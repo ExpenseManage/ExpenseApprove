@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Request {
+public class ExpenseRequest {
 
     @JsonProperty("title")
     private String title;
