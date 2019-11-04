@@ -14,24 +14,24 @@ public class UserServiceImpl implements UserService {
     private
     UserDaoImpl userDao;
 
-    public void addUser(User userModel){
+    public void addUser(User userModel) {
 //        TODO: add password encryption and validations
         userDao.addUser(userModel);
     }
 
-    public void addApprover(ApproverRequest approverRequest){
+    public void addApprover(ApproverRequest approverRequest) {
         String userId = approverRequest.getUserId();
         String approverId = approverRequest.getApproverId();
-        if(userDao.existsUser(userId)) {
+        if (userDao.existsUser(userId)) {
             userDao.addApprover(userId, approverId);
         }
     }
 
-    public void removeApprover(User approver){
+    public void removeApprover(User approver) {
 
     }
 
-    public  void notifyApprovers(){
+    public void notifyApprovers() {
 
     }
 }
