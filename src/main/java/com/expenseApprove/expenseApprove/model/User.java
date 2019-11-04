@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
+import java.util.List;
+
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -27,5 +29,5 @@ public class User {
     private String password;
 
     @JsonProperty("approvers")
-    private String approvers;
+    private List<String> approvers;
 }
