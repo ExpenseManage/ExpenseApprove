@@ -15,7 +15,7 @@ public class ApproverRequest {
     @JsonProperty("userId")
     private String userId;
 
-    @JsonProperty("userId")
+    @JsonProperty("approverId")
     private String approverId;
 
 }

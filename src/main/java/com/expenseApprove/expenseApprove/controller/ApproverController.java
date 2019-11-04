@@ -22,11 +22,11 @@ public class  ApproverController{
 
 
     @PostMapping("/approver")
-    public ResponseEntity<Response> createUser(@RequestBody ApproverRequest approverRequest){
+    public ResponseEntity<Response> createApprover(@RequestBody ApproverRequest approverRequest){
 //        TODO: add id in response
         userService.addApprover(approverRequest);
         Response responseBody = new Response();
-        responseBody.setMessage("added user");
+        responseBody.setMessage("added approver");
         responseBody.setStatus(HttpStatus.OK);
         ResponseEntity response = new  ResponseEntity<Response>(responseBody,HttpStatus.OK);
         return response;
