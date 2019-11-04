@@ -1,4 +1,4 @@
 package com.expenseApprove.expenseApprove.controller;
 
-public class Approver {
+public class ExpenseController {
 }

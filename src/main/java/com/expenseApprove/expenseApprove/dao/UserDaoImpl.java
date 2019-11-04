@@ -23,4 +23,8 @@ public class UserDaoImpl implements UserDao {
         List data = mongoTemplate.find(query,User.class);
         return mongoTemplate.count(query, User.class);
     }
+
+    public void addApprover(String userId, String approverId){
+//        TODO: add approver add logic
+    }
 }
