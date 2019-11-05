@@ -28,9 +28,9 @@ target/
 build/
 
 ###maven
-mvn/wrapper
-mvnw
+.mvn
 mvnw.cmd
+mvnw
 
 ### VS Code ###
 .vscode/
