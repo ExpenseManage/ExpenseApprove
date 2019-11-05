@@ -28,7 +28,7 @@ target/
 build/
 
 ###maven
-mvn/
+mvn/wrapper
 mvnw
 mvnw.cmd
 
