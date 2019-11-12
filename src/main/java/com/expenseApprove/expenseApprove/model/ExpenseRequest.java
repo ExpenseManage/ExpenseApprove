@@ -30,4 +30,7 @@ public class ExpenseRequest {
     @JsonProperty("type")
     private Constants.requestType type;
 
+    @JsonProperty("userId")
+    private String userId;
+
 }
