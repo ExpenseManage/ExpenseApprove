@@ -7,13 +7,11 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
-import java.util.List;
-
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Response<T> {
+public class Response {
 
     @JsonProperty("id")
     private String id;
@@ -23,7 +21,4 @@ public class Response<T> {
 
     @JsonProperty("status")
     private HttpStatus status;
-
-    @JsonProperty("body")
-    private List<T> body;
 }
