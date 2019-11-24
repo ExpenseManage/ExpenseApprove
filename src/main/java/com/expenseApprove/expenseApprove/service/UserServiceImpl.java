@@ -1,8 +1,7 @@
 package com.expenseApprove.expenseApprove.service;
 
 import com.expenseApprove.expenseApprove.dao.UserDaoImpl;
-import com.expenseApprove.expenseApprove.model.ApproverRequest;
-import com.expenseApprove.expenseApprove.model.User;
+import com.expenseApprove.expenseApprove.model.Data.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +18,7 @@ public class UserServiceImpl implements UserService {
         userDao.addUser(userModel);
     }
 
+<<<<<<< Updated upstream
     public void addApprover(ApproverRequest approverRequest) {
         String userId = approverRequest.getUserId();
         String approverId = approverRequest.getApproverId();
@@ -34,4 +34,8 @@ public class UserServiceImpl implements UserService {
     public void notifyApprovers() {
 
     }
+
+
+=======
+>>>>>>> Stashed changes
 }

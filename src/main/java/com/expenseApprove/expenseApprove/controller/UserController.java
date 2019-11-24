@@ -1,8 +1,8 @@
 package com.expenseApprove.expenseApprove.controller;
 
 
-import com.expenseApprove.expenseApprove.model.Response;
-import com.expenseApprove.expenseApprove.model.User;
+import com.expenseApprove.expenseApprove.model.Data.User;
+import com.expenseApprove.expenseApprove.model.business.Response;
 import com.expenseApprove.expenseApprove.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

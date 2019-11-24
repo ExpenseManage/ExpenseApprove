@@ -1,6 +1,6 @@
 package com.expenseApprove.expenseApprove.dao;
 
-import com.expenseApprove.expenseApprove.model.User;
+import com.expenseApprove.expenseApprove.model.Data.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -26,24 +26,6 @@ public class UserDaoImpl implements UserDao {
         Query query = new Query();
         List data = mongoTemplate.find(query, User.class);
         return mongoTemplate.count(query, User.class);
-    }
-
-    public void addApprover(String userId, String approverId) {
-        Query query = new Query();
-        query.addCriteria(Criteria.where("id").is(userId));
-        User user = mongoTemplate.findOne(query, User.class);
-        Update update = new Update();
-        assert user != null;
-        List approverList = new ArrayList();
-        if (user.getApprovers() == null) {
-            approverList.add(approverId);
-        } else {
-            approverList = user.getApprovers();
-            approverList.add(approverId);
-        }
-        update.set("approvers", approverList);
-        mongoTemplate.updateFirst(query, update, User.class);
-
     }
 
     public User getUserById(String id) {
