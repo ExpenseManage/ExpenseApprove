@@ -18,24 +18,4 @@ public class UserServiceImpl implements UserService {
         userDao.addUser(userModel);
     }
 
-<<<<<<< Updated upstream
-    public void addApprover(ApproverRequest approverRequest) {
-        String userId = approverRequest.getUserId();
-        String approverId = approverRequest.getApproverId();
-        if (userDao.existsUser(userId)) {
-            userDao.addApprover(userId, approverId);
-        }
-    }
-
-    public void removeApprover(User approver) {
-
-    }
-
-    public void notifyApprovers() {
-
-    }
-
-
-=======
->>>>>>> Stashed changes
 }
