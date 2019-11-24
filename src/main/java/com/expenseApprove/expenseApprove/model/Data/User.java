@@ -1,11 +1,11 @@
-package com.expenseApprove.expenseApprove.model;
+package com.expenseApprove.expenseApprove.model.Data;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.http.HttpStatus;
+import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
@@ -13,17 +13,21 @@ import java.util.List;
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Response<T> {
+public class User {
 
+    @Id
     @JsonProperty("id")
     private String id;
 
-    @JsonProperty("message")
-    private  String message;
+    @JsonProperty("name")
+    private String name;
 
-    @JsonProperty("status")
-    private HttpStatus status;
+    @JsonProperty("email")
+    private String email;
 
-    @JsonProperty("body")
-    private List<T> body;
+    @JsonProperty("password")
+    private String password;
+
+    @JsonProperty("approvers")
+    private List<String> approvers;
 }
